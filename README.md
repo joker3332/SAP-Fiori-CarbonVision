@@ -4,6 +4,8 @@
 
 **Carbon Vision** is a cutting-edge web application developed as part of the EY Young Technology Professional Challenge 2023. This project focuses on Carbon Tracking & Reduction, providing a comprehensive solution to monitor and mitigate carbon emissions. The application integrates various functionalities, including an Analytical Dashboard, Scorecard Report, AI Chatbot Consultant services, Data Viewer, Carbon Offset Project showcase, and Gamification elements.
 
+![](App-Demo-Screenshot/Release-3.0.jpeg)
+
 ## Key Features
 
 ### 1. Analytical Dashboard
