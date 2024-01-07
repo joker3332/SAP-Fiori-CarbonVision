@@ -7,36 +7,36 @@
 ## Key Features
 
 ### 1. Analytical Dashboard
-   ![](App-Demo-Screenshot/AnalyticalDashboard.png)
    - Real-time visualization of carbon emissions data.
    - Interactive charts and graphs for insightful analysis.
+   ![](App-Demo-Screenshot/AnalyticalDashboard.png)
 
 ### 2. Scorecard Report
-   ![](App-Demo-Screenshot/ScorecardReport1.jpeg)
-   ![](App-Demo-Screenshot/ScorecardReport2.jpeg)
    - Comprehensive reports on carbon reduction achievements.
    - Benchmarking against set targets.
+   ![](App-Demo-Screenshot/ScorecardReport1.jpeg)
+   ![](App-Demo-Screenshot/ScorecardReport2.jpeg)
 
 ### 3. AI Chatbot Consultant
-   ![](App-Demo-Screenshot/Chatbot.jpeg)
    - AI-powered chatbot for personalized carbon reduction advice.
    - Natural language processing for user-friendly interactions.
+   ![](App-Demo-Screenshot/Chatbot.jpeg)
 
 ### 4. Data Viewer
-   ![](App-Demo-Screenshot/DataViewer.jpeg)
    - User-friendly interface to explore detailed carbon data.
    - Filtering and sorting options for a customized viewing experience.
+   ![](App-Demo-Screenshot/DataViewer.jpeg)
 
 ### 5. Carbon Offset Project Showcase
-   ![](App-Demo-Screenshot/CarbonOffsetProjects.jpeg)
    - Showcase of carbon offset projects supported by the platform.
    - Information on environmental impact and contributions.
+   ![](App-Demo-Screenshot/CarbonOffsetProjects.jpeg)
 
 ### 6. Gamification Elements
-   ![](App-Demo-Screenshot/Gamification_Badges.jpeg)
-   ![](App-Demo-Screenshot/Gamification_Leaderboard.jpeg)
    - Engaging gamification features to encourage sustainable practices.
    - Rewards and recognition for users contributing to carbon reduction.
+   ![](App-Demo-Screenshot/Gamification_Badges.jpeg)
+   ![](App-Demo-Screenshot/Gamification_Leaderboard.jpeg)
 
 ## Technologies Used
 
