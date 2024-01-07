@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="sap-desktop sapUiTheme-sap_horizon sapUiMedia-Std-Desktop sapUiMedia-StdExt-LargeDesktop sapUiMedia-Ushell-LargeDesktop sapUiMedia-GenericTileDeviceSet-large" dir="ltr" data-sap-ui-browser="cr113" data-sap-ui-os="win10" lang="en-US" data-sap-ui-animation-mode="full" data-sap-ui-animation="on" style="height: 100%;">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Carbon Vision App</title>
+    <script>
+        window["sap-ushell-config"] = {
+            defaultRenderer: "fiori2",
+            applications: {}
+        };
+    </script>
+    <script src="./Home2_files/sandbox.js.download" id="sap-ushell-bootstrap"></script>
+    <script id="sap-ui-bootstrap" src="./Home2_files/sap-ui-core.js.download" data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration, sap.ui.layout" data-sap-ui-compatversion="edge" data-sap-ui-theme="sap_horizon" data-sap-ui-frameoptions="allow"></script>
+    <script src="https://sapui5.hana.ondemand.com/test-resources/sap/ushell/bootstrap/sandbox.js" id="sap-ushell-bootstrap"></script>
+	<script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration, sap.ui.layout"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-theme="sap_horizon"
+			data-sap-ui-frameOptions="allow"
+	></script>
+    <script>
+		window["sap-ushell-config"] = {
+			defaultRenderer: "fiori2",
+			applications: {}
+		};
+	</script>
+    <link rel="stylesheet" href="./Home2_files/library.css" id="sap-ui-theme-sap.ui.core" data-sap-ui-ready="true">
+    <meta name="format-detection" content="telephone=no">
+    <script charset="utf-8" src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=63223058916"></script>
+    <link rel="stylesheet" href="./Home2_files/library(1).css" id="sap-ui-theme-sap.m" data-sap-ui-ready="true">
+    <link rel="stylesheet" href="./Home2_files/library(2).css" id="sap-ui-theme-sap.ushell" data-sap-ui-ready="true">
+    <link rel="stylesheet" href="./Home2_files/library(3).css" id="sap-ui-theme-sap.suite.ui.commons" data-sap-ui-ready="true">
+    <link rel="stylesheet" href="./Home2_files/library(4).css" id="sap-ui-theme-sap.collaboration" data-sap-ui-ready="true">
+    <link rel="stylesheet" href="./Home2_files/library(5).css" id="sap-ui-theme-sap.ui.layout" data-sap-ui-ready="true">
+    <script src="./Home2_files/homepage-af-dep.js.download" data-sap-ui-module="sap/ushell/preload-bundles/homepage-af-dep.js"></script>
+    <link rel="icon" href="https://sapui5.hana.ondemand.com/resources/sap/ushell/themes/base/img/launchpad_favicon.ico" data-sap-ui-ready="true">
+    <script src="./Home2_files/library-preload.js.download" data-sap-ui-module="sap/esh/search/ui/library-preload.js"></script>
+    <script src="./Home2_files/library-preload.js(1).download" data-sap-ui-module="sap/f/library-preload.js"></script>
+    <script src="./Home2_files/library-preload.js(2).download" data-sap-ui-module="sap/suite/ui/microchart/library-preload.js"></script>
+    <script src="./Home2_files/library-preload.js(3).download" data-sap-ui-module="sap/ui/export/library-preload.js"></script>
+    <script src="./Home2_files/library-preload.js(4).download" data-sap-ui-module="sap/ui/vbm/library-preload.js"></script>
+    <script src="./Home2_files/library-preload.js(5).download" data-sap-ui-module="sap/ui/vk/library-preload.js"></script>
+    <link rel="stylesheet" href="./Home2_files/library(6).css" id="sap-ui-theme-sap.f" data-sap-ui-ready="true">
+    <link rel="stylesheet" href="./Home2_files/library(7).css" id="sap-ui-theme-sap.ui.export" data-sap-ui-ready="true">
+    <link rel="stylesheet" href="./Home2_files/library(8).css" id="sap-ui-theme-sap.ui.unified" data-sap-ui-ready="true">
+    <link rel="stylesheet" href="./Home2_files/library(9).css" id="sap-ui-theme-sap.ui.vbm" data-sap-ui-ready="true">
+    <link rel="stylesheet" href="./Home2_files/library(10).css" id="sap-ui-theme-sap.ui.vk" data-sap-ui-ready="true">
+    <link rel="stylesheet" href="./Home2_files/library(11).css" id="sap-ui-theme-sap.suite.ui.microchart" data-sap-ui-ready="true">
+    <link rel="stylesheet" href="./Home2_files/library(12).css" id="sap-ui-theme-sap.esh.search.ui" data-sap-ui-ready="true">
+    <style>
+    #sapUshellAllMyAppsPopover-popover {
+        height: 358px!important;
+        display: none;
+    }
+
+    h1#__title0,#__item30-allMyAppsView--sapUshellAllMyAppsDataSourcesList-0-titleText,#allMyAppsView--sapUshellAllMyAppsDetailsHeaderLabel-inner{
+        font-weight: bold;
+    }
+
+    #allMyAppsView--sapUshellAllMyAppsMasterDetail {
+        box-shadow: none !important;
+    }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        var appTitleButton = document.getElementById('shellAppTitle-button');
+        var iconElement = document.getElementById('__icon0');
+        var popover = document.getElementById('sapUshellAllMyAppsPopover-popover');
+        var backButton = document.getElementById('sapUshellAppTitleBackButton');
+        var home_btn = document.getElementById('allMyAppsView--sapUshellAllMyAppsDataSourcesList');
+
+        if (home_btn && backButton && popover && iconElement) {
+            backButton.addEventListener('click', function () {
+            //Solely for closing the popover
+            popover.style.display = 'none';
+            iconElement.style.transform = 'none';
+            });
+
+            home_btn.addEventListener('click', function () {
+            popover.style.display = 'none';
+            iconElement.style.transform = 'none';
+            window.location.href = './index.html';
+            });
+        }
+
+        if (appTitleButton && popover) {
+            appTitleButton.addEventListener('click', function () {
+            // Toggle the visibility of the popover
+            if (popover.style.display === 'block') {
+                popover.style.display = 'none';
+            } else {
+                popover.style.display = 'block';
+            }
+            });
+        }
+
+        if (appTitleButton && iconElement) {
+            appTitleButton.addEventListener('click', function () {
+            // Toggle the transform property on the icon element
+            if (iconElement.style.transform === 'rotate(180deg)') {
+                iconElement.style.transform = 'none';
+            } else {
+                iconElement.style.transform = 'rotate(180deg)';
+            }
+            });
+        }
+
+        // Get references to the elements
+        var item0 = document.getElementById('__item2-allMyAppsView--oItemsContainerlist-0');
+        var item1 = document.getElementById('__item2-allMyAppsView--oItemsContainerlist-1');
+        var item2 = document.getElementById('__item2-allMyAppsView--oItemsContainerlist-2');
+        var item3 = document.getElementById('__item2-allMyAppsView--oItemsContainerlist-3');
+        var item4 = document.getElementById('__item2-allMyAppsView--oItemsContainerlist-4');
+        var item5 = document.getElementById('__item2-allMyAppsView--oItemsContainerlist-5');
+
+        // Add click event listeners to each element
+        if (item0) {
+            item0.addEventListener('click', function () {
+                window.open('https://guided-experience-sac-ap11.cfapps.ap11.hana.ondemand.com/sap/fpa/ui/app.html#/story2&/s2/78C42001D6BD6772EA171066BAF67093/?mode=present', '_blank');
+            });
+        }
+
+        if (item1) {
+            item1.addEventListener('click', function () {
+                window.open('https://guided-experience-sac-ap11.cfapps.ap11.hana.ondemand.com/sap/fpa/ui/tenants/b265d/bo/application/8188E58569653E0461671ECE4676DCDA?mode=present', '_blank');
+            });
+        }
+
+        if (item2) {
+            item2.addEventListener('click', function () {
+            window.location.href = './carbon-offset-project/index.view.html'; // Replace with your actual URL
+            });
+        }
+
+        if (item3) {
+            item3.addEventListener('click', function () {
+            window.location.href = './gamification/Gamification.html'; // Replace with your actual URL
+            });
+        }
+
+        if (item4) {
+            item4.addEventListener('click', function () {
+            window.location.href = './data_viewer/data_viewer.view.html'; // Replace with your actual URL
+            });
+        }
+
+        if (item5) {
+            item5.addEventListener('click', function () {
+            window.location.href = './chatbot/chatbot.view.html'; // Replace with your actual URL
+            });
+        }
+    });
+
+    </script>
+</head>
+
+<body class="sapUiBody sapUiSizeCompact" id="content">
+    <div id="sap-ui-static" data-sap-ui-area="sap-ui-static" style="height: 0px; width: 0px; overflow: hidden; float: left;"><span id="sap-ui-static-firstfe" tabindex="-1" style="font-size: 0px;"></span><span id="__invisiblemessage-polite" data-sap-ui="__invisiblemessage-polite" class="sapUiInvisibleMessagePolite" role="status" aria-live="polite"></span><span id="__invisiblemessage-assertive" data-sap-ui="__invisiblemessage-assertive" class="sapUiInvisibleMessageAssertive" role="status" aria-live="assertive"></span><span id="sapUshellDashboardAccessibilityTileText" data-sap-ui="sapUshellDashboardAccessibilityTileText" class="sapUiInvisibleText" aria-hidden="true">Tile</span><span id="sapUshellDashboardAccessibilityTileEditModeText" data-sap-ui="sapUshellDashboardAccessibilityTileEditModeText" class="sapUiInvisibleText" aria-hidden="true">Has Details</span><span id="__text2" data-sap-ui="__text2" class="sapUiInvisibleText" aria-hidden="true">Available Values</span><span id="sapUshellDashboardFooter-InvisibleText" data-sap-ui="sapUshellDashboardFooter-InvisibleText" class="sapUiInvisibleText" aria-hidden="true">Footer actions</span><span id="__text3" data-sap-ui="__text3" class="sapUiInvisibleText" aria-hidden="true"></span><span id="backBtn-describedby" data-sap-ui="backBtn-describedby" class="sapUiInvisibleText" aria-hidden="true"></span><span id="endItemsOverflowBtn-describedby" data-sap-ui="endItemsOverflowBtn-describedby" class="sapUiInvisibleText" aria-hidden="true"></span><span id="sf-describedby" data-sap-ui="sf-describedby" class="sapUiInvisibleText" aria-hidden="true"></span></div>
+    <div id="sapUshellAllMyAppsPopover-popover" data-sap-ui="sapUshellAllMyAppsPopover-popover" data-sap-ui-render="" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="sapUshellShellAppPopoverHeader" class="sapMPopover sapMPopoverWithBar sapMPopoverWithoutSubHeader sapMPopoverWithoutFooter sapMPopoverVerScrollDisabled sapMPopup-CTX sapUiSizeCompact sapMResponsivePopover sapContrastPlus sapMPopoverVerScrollDisabled sapMResponsivePopover sapContrastPlus sapUiShd" style="position: absolute; visibility: visible; z-index: 31; display: none; top: 53px; left: 10px; bottom: 10px; overflow: visible;" data-sap-ui-popup="id-1701837209891-48">
+        <span id="sapUshellAllMyAppsPopover-popover-firstfe" tabindex="0" role="presentation" class="sapMPopoverHiddenFocusable"></span>
+        <header class="sapMPopoverHeader">
+           <div id="sapUshellShellAppPopoverHeader" data-sap-ui="sapUshellShellAppPopoverHeader" data-sap-ui-render="" data-sap-ui-fastnavgroup="true" role="toolbar" class="sapMIBar sapMIBar-CTX sapMBar sapMContent-CTX sapMBar-CTX sapMHeader-CTX sapMBarTitleAlignAuto">
+              <div id="sapUshellShellAppPopoverHeader-BarLeft" class="sapMBarLeft sapMBarContainer"><button id="sapUshellAppTitleBackButton" data-sap-ui="sapUshellAppTitleBackButton" data-sap-ui-render="" data-ui5-accesskey="" aria-label="Back" title="Back" class="sapMBtnBase sapMBtn sapUshellCatalogNewGroupBackButton sapMBarChild"><span id="sapUshellAppTitleBackButton-inner" class="sapMBtnInner sapMBtnHoverable sapMFocusable sapMBtnIconFirst sapMBtnDefault"><span id="sapUshellAppTitleBackButton-img" data-sap-ui="sapUshellAppTitleBackButton-img" data-sap-ui-render="" role="presentation" aria-hidden="true" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL sapMBtnCustomIcon sapMBtnIcon sapMBtnIconLeft" style="font-family: SAP-icons;"></span></span><span id="sapUshellAppTitleBackButton-tooltip" class="sapUiInvisibleText">Back</span></button><span id="sap-ui-invisible-sapUshellAllMyAppsToggleListButton" data-sap-ui="sap-ui-invisible-sapUshellAllMyAppsToggleListButton" aria-hidden="true" class="sapUiHiddenPlaceholder" style=""></span></div>
+              <div id="sapUshellShellAppPopoverHeader-BarMiddle" class="sapMBarMiddle">
+                 <div id="sapUshellShellAppPopoverHeader-BarPH" class="sapMBarPH sapMBarContainer" style="left: 52px; position: absolute; width: 828px;">
+                    <h1 id="__title0" data-sap-ui="__title0" data-sap-ui-render="" class="sapMTitle sapMTitleStyleAuto sapMTitleNoWrap sapUiSelectable sapMTitleMaxWidth sapMBarChild"><span id="__title0-inner" dir="auto">List of Apps</span></h1>
+                 </div>
+              </div>
+              <div id="sapUshellShellAppPopoverHeader-BarRight" class="sapMBarRight sapMBarContainer sapMBarEmpty"></div>
+           </div>
+        </header>
+        <div id="sapUshellAllMyAppsPopover-popover-cont" class="sapMPopoverCont sapUiScrollDelegate" style="width: 56rem; height: 317px; overflow: auto hidden; max-width: 1516px;">
+           <div id="sapUshellAllMyAppsPopover-popover-scroll" class="sapMPopoverScroll" style="height: 100%; display: block;">
+              <div id="allMyAppsView" data-sap-ui="allMyAppsView" data-sap-ui-render="" aria-label="All My Apps" data-sap-ui-preserve="allMyAppsView" class="sapUiView sapUiXMLView sapUiViewDisplayBlock" style="width: 100%; height: 100%;">
+                 <div id="allMyAppsView--sapUshellAllMyAppsMasterDetail" data-sap-ui="allMyAppsView--sapUshellAllMyAppsMasterDetail" data-sap-ui-render="" class="sapMSplitContainer sapUiGlobalBackgroundColor sapMSplitContainerStretchCompress sapMSplitApp sapUshellAllMyAppsView">
+                    <div id="allMyAppsView--sapUshellAllMyAppsMasterDetail-BG" class="sapMSplitContainerBG sapUiGlobalBackgroundImage"></div>
+                    <div id="allMyAppsView--sapUshellAllMyAppsMasterDetail-Master" data-sap-ui="allMyAppsView--sapUshellAllMyAppsMasterDetail-Master" data-sap-ui-render="" class="sapMNav sapMSplitContainerMasterVisible sapMSplitContainerMaster">
+                       <div id="allMyAppsView--sapUshellAllMyAppsMasterPage" data-sap-ui="allMyAppsView--sapUshellAllMyAppsMasterPage" data-sap-ui-render="" role="region" aria-label="List of Catalogs" class="sapMPage sapMPageBgStandard sapMPageBusyCoversAll sapMNavItem">
+                          <section id="allMyAppsView--sapUshellAllMyAppsMasterPage-cont" role="main" class="sapMPageEnableScrolling sapUiScrollDelegate" style="overflow: hidden auto;">
+                             <div id="allMyAppsView--sapUshellAllMyAppsDataSourcesList" data-sap-ui="allMyAppsView--sapUshellAllMyAppsDataSourcesList" data-sap-ui-render="" data-sap-ui-fastnavgroup="true" title="Filter by Catalog" class="sapMList sapMListBGSolid" style="width: 100%;">
+                                <div id="allMyAppsView--sapUshellAllMyAppsDataSourcesList-before" role="none" tabindex="-1" class="sapMListDummyArea"></div>
+                                <ul id="allMyAppsView--sapUshellAllMyAppsDataSourcesList-listUl" role="list" class="sapMListItems sapMListUl sapMListShowSeparatorsAll sapMListModeSingleSelectMaster" tabindex="0">
+                                   <li id="__item30-allMyAppsView--sapUshellAllMyAppsDataSourcesList-0" data-sap-ui="__item30-allMyAppsView--sapUshellAllMyAppsDataSourcesList-0" data-sap-ui-render="" tabindex="-1" role="listitem" aria-setsize="1" aria-posinset="1" class="sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBSelected sapMLIBFocusable sapMSLI sapMSLIWrapping sapMLIBHoverable">
+                                      <div id="__item30-allMyAppsView--sapUshellAllMyAppsDataSourcesList-0-content" class="sapMLIBContent">
+                                         <div class="sapMSLIDiv">
+                                            <div class="sapMSLITitleOnly"><span id="__item30-allMyAppsView--sapUshellAllMyAppsDataSourcesList-0-titleText" aria-live="polite">Home Page</span></div>
+                                         </div>
+                                      </div>
+                                   </li>
+                                </ul>
+                                <div id="allMyAppsView--sapUshellAllMyAppsDataSourcesList-after" role="none" tabindex="0" class="sapMListDummyArea sapMListDummyAreaSticky"></div>
+                             </div>
+                          </section>
+                       </div>
+                    </div>
+                    <div id="allMyAppsView--sapUshellAllMyAppsMasterDetail-Detail" data-sap-ui="allMyAppsView--sapUshellAllMyAppsMasterDetail-Detail" data-sap-ui-render="" class="sapMNav sapMSplitContainerDetail">
+                       <div id="allMyAppsView--sapUshellAllMyAppsDetailsPage" data-sap-ui="allMyAppsView--sapUshellAllMyAppsDetailsPage" data-sap-ui-render="" role="region" aria-label="List of Applications in the Catalog" class="sapMPage sapMPageBgStandard sapMPageBusyCoversAll sapMNavItem">
+                          <section id="allMyAppsView--sapUshellAllMyAppsDetailsPage-cont" role="main" class="sapMPageEnableScrolling sapUiScrollDelegate" style="overflow: hidden auto;">
+                             <div id="allMyAppsView--sapUshellAllMyAppsDetailsHeaderLabel" data-sap-ui="allMyAppsView--sapUshellAllMyAppsDetailsHeaderLabel" data-sap-ui-render="" role="heading" aria-level="2" class="sapMTitle sapMTitleStyleAuto sapMTitleWrap sapUiSelectable sapMTitleMaxWidth sapUiSmallMarginTopBottom"><span id="allMyAppsView--sapUshellAllMyAppsDetailsHeaderLabel-inner" dir="auto">Home Page</span></div>
+                             <div id="allMyAppsView--allMyAppsScrollContainer" data-sap-ui="allMyAppsView--allMyAppsScrollContainer" data-sap-ui-render="" class="sapMScrollContV sapMScrollCont sapUshellAllMyAppsDetailsItemContainer sapUiScrollDelegate" style="width: auto; height: auto; overflow: hidden auto;">
+                                <div id="allMyAppsView--allMyAppsScrollContainer-scroll" class="sapMScrollContScroll">
+                                   <div id="allMyAppsView--oItemsContainerlist" data-sap-ui="allMyAppsView--oItemsContainerlist" data-sap-ui-render="" data-sap-ui-fastnavgroup="true" class="sapMList sapMListBGSolid" style="width: 100%;">
+                                      <div id="allMyAppsView--oItemsContainerlist-before" role="none" tabindex="-1" class="sapMListDummyArea"></div>
+                                      <ul id="allMyAppsView--oItemsContainerlist-listUl" role="list" tabindex="0" class="sapMListItems sapMListUl sapMListShowSeparatorsAll sapMListModeNone">
+                                         <li id="__item2-allMyAppsView--oItemsContainerlist-0" data-sap-ui="__item2-allMyAppsView--oItemsContainerlist-0" data-sap-ui-render="" tabindex="-1" role="listitem" aria-setsize="6" aria-posinset="1" class="sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMCLI sapUshellAllMyAppsListItem">
+                                            <div id="__item2-allMyAppsView--oItemsContainerlist-0-content" class="sapMLIBContent">
+                                               <div id="__vbox0-allMyAppsView--oItemsContainerlist-0" data-sap-ui="__vbox0-allMyAppsView--oItemsContainerlist-0" data-sap-ui-render="" class="sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStretch sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapMFlexBoxBGTransparent">
+                                                  <div id="__data57" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="__label0-allMyAppsView--oItemsContainerlist-0" data-sap-ui="__label0-allMyAppsView--oItemsContainerlist-0" data-sap-ui-render="" class="sapMLabel sapUiSelectable sapMLabelMaxWidth sapUshellAllMyAppsItemTitle" style="text-align: left;"><span id="__label0-allMyAppsView--oItemsContainerlist-0-text" class="sapMLabelTextWrapper"><bdi id="__label0-allMyAppsView--oItemsContainerlist-0-bdi">Carbon Insight Dashboard: Tracking and Reducing Emissions</bdi></span><span data-colon=":" class="sapMLabelColonAndRequired"></span></span></div>
+                                                  <div id="__data58" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem sapUiHiddenPlaceholder" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-0" data-sap-ui="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-0" aria-hidden="true" class="sapUiHiddenPlaceholder"></span></div>
+                                               </div>
+                                            </div>
+                                         </li>
+                                         <li id="__item2-allMyAppsView--oItemsContainerlist-1" data-sap-ui="__item2-allMyAppsView--oItemsContainerlist-1" data-sap-ui-render="" tabindex="-1" role="listitem" aria-setsize="6" aria-posinset="2" class="sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMCLI sapUshellAllMyAppsListItem">
+                                            <div id="__item2-allMyAppsView--oItemsContainerlist-1-content" class="sapMLIBContent">
+                                               <div id="__vbox0-allMyAppsView--oItemsContainerlist-1" data-sap-ui="__vbox0-allMyAppsView--oItemsContainerlist-1" data-sap-ui-render="" class="sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStretch sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapMFlexBoxBGTransparent">
+                                                  <div id="__data59" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="__label0-allMyAppsView--oItemsContainerlist-1" data-sap-ui="__label0-allMyAppsView--oItemsContainerlist-1" data-sap-ui-render="" class="sapMLabel sapUiSelectable sapMLabelMaxWidth sapUshellAllMyAppsItemTitle" style="text-align: left;"><span id="__label0-allMyAppsView--oItemsContainerlist-1-text" class="sapMLabelTextWrapper"><bdi id="__label0-allMyAppsView--oItemsContainerlist-1-bdi">Carbon Reduction Scorecard Report</bdi></span><span data-colon=":" class="sapMLabelColonAndRequired"></span></span></div>
+                                                  <div id="__data60" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem sapUiHiddenPlaceholder" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-1" data-sap-ui="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-1" aria-hidden="true" class="sapUiHiddenPlaceholder"></span></div>
+                                               </div>
+                                            </div>
+                                         </li>
+                                         <li id="__item2-allMyAppsView--oItemsContainerlist-2" data-sap-ui="__item2-allMyAppsView--oItemsContainerlist-2" data-sap-ui-render="" tabindex="-1" role="listitem" aria-setsize="6" aria-posinset="3" class="sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMCLI sapUshellAllMyAppsListItem">
+                                            <div id="__item2-allMyAppsView--oItemsContainerlist-2-content" class="sapMLIBContent">
+                                               <div id="__vbox0-allMyAppsView--oItemsContainerlist-2" data-sap-ui="__vbox0-allMyAppsView--oItemsContainerlist-2" data-sap-ui-render="" class="sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStretch sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapMFlexBoxBGTransparent">
+                                                  <div id="__data61" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="__label0-allMyAppsView--oItemsContainerlist-2" data-sap-ui="__label0-allMyAppsView--oItemsContainerlist-2" data-sap-ui-render="" class="sapMLabel sapUiSelectable sapMLabelMaxWidth sapUshellAllMyAppsItemTitle" style="text-align: left;"><span id="__label0-allMyAppsView--oItemsContainerlist-2-text" class="sapMLabelTextWrapper"><bdi id="__label0-allMyAppsView--oItemsContainerlist-2-bdi">Carbon Offset Hub</bdi></span><span data-colon=":" class="sapMLabelColonAndRequired"></span></span></div>
+                                                  <div id="__data62" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem sapUiHiddenPlaceholder" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-2" data-sap-ui="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-2" aria-hidden="true" class="sapUiHiddenPlaceholder"></span></div>
+                                               </div>
+                                            </div>
+                                         </li>
+                                         <li id="__item2-allMyAppsView--oItemsContainerlist-3" data-sap-ui="__item2-allMyAppsView--oItemsContainerlist-3" data-sap-ui-render="" tabindex="-1" role="listitem" aria-setsize="6" aria-posinset="4" class="sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMCLI sapUshellAllMyAppsListItem">
+                                            <div id="__item2-allMyAppsView--oItemsContainerlist-3-content" class="sapMLIBContent">
+                                               <div id="__vbox0-allMyAppsView--oItemsContainerlist-3" data-sap-ui="__vbox0-allMyAppsView--oItemsContainerlist-3" data-sap-ui-render="" class="sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStretch sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapMFlexBoxBGTransparent">
+                                                  <div id="__data63" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="__label0-allMyAppsView--oItemsContainerlist-3" data-sap-ui="__label0-allMyAppsView--oItemsContainerlist-3" data-sap-ui-render="" class="sapMLabel sapUiSelectable sapMLabelMaxWidth sapUshellAllMyAppsItemTitle" style="text-align: left;"><span id="__label0-allMyAppsView--oItemsContainerlist-3-text" class="sapMLabelTextWrapper"><bdi id="__label0-allMyAppsView--oItemsContainerlist-3-bdi">Carbon Gamification Hub</bdi></span><span data-colon=":" class="sapMLabelColonAndRequired"></span></span></div>
+                                                  <div id="__data64" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem sapUiHiddenPlaceholder" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-3" data-sap-ui="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-3" aria-hidden="true" class="sapUiHiddenPlaceholder"></span></div>
+                                               </div>
+                                            </div>
+                                         </li>
+                                         <li id="__item2-allMyAppsView--oItemsContainerlist-4" data-sap-ui="__item2-allMyAppsView--oItemsContainerlist-4" data-sap-ui-render="" tabindex="-1" role="listitem" aria-setsize="6" aria-posinset="5" class="sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMCLI sapUshellAllMyAppsListItem">
+                                            <div id="__item2-allMyAppsView--oItemsContainerlist-4-content" class="sapMLIBContent">
+                                               <div id="__vbox0-allMyAppsView--oItemsContainerlist-4" data-sap-ui="__vbox0-allMyAppsView--oItemsContainerlist-4" data-sap-ui-render="" class="sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStretch sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapMFlexBoxBGTransparent">
+                                                  <div id="__data65" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="__label0-allMyAppsView--oItemsContainerlist-4" data-sap-ui="__label0-allMyAppsView--oItemsContainerlist-4" data-sap-ui-render="" class="sapMLabel sapUiSelectable sapMLabelMaxWidth sapUshellAllMyAppsItemTitle" style="text-align: left;"><span id="__label0-allMyAppsView--oItemsContainerlist-4-text" class="sapMLabelTextWrapper"><bdi id="__label0-allMyAppsView--oItemsContainerlist-4-bdi">CarbonVision Data Viewer</bdi></span><span data-colon=":" class="sapMLabelColonAndRequired"></span></span></div>
+                                                  <div id="__data66" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem sapUiHiddenPlaceholder" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-4" data-sap-ui="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-4" aria-hidden="true" class="sapUiHiddenPlaceholder"></span></div>
+                                               </div>
+                                            </div>
+                                         </li>
+                                         <li id="__item2-allMyAppsView--oItemsContainerlist-5" data-sap-ui="__item2-allMyAppsView--oItemsContainerlist-5" data-sap-ui-render="" tabindex="-1" role="listitem" aria-setsize="6" aria-posinset="6" class="sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMCLI sapUshellAllMyAppsListItem">
+                                            <div id="__item2-allMyAppsView--oItemsContainerlist-5-content" class="sapMLIBContent">
+                                               <div id="__vbox0-allMyAppsView--oItemsContainerlist-5" data-sap-ui="__vbox0-allMyAppsView--oItemsContainerlist-5" data-sap-ui-render="" class="sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStretch sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapMFlexBoxBGTransparent">
+                                                  <div id="__data67" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="__label0-allMyAppsView--oItemsContainerlist-5" data-sap-ui="__label0-allMyAppsView--oItemsContainerlist-5" data-sap-ui-render="" class="sapMLabel sapUiSelectable sapMLabelMaxWidth sapUshellAllMyAppsItemTitle" style="text-align: left;"><span id="__label0-allMyAppsView--oItemsContainerlist-5-text" class="sapMLabelTextWrapper"><bdi id="__label0-allMyAppsView--oItemsContainerlist-5-bdi">AI-Driven Carbon Tracking and Reduction Assistant</bdi></span><span data-colon=":" class="sapMLabelColonAndRequired"></span></span></div>
+                                                  <div id="__data68" class="sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem sapUiHiddenPlaceholder" style="order: 0; flex: 0 1 auto; min-height: auto; min-width: auto;"><span id="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-5" data-sap-ui="sap-ui-invisible-__label1-allMyAppsView--oItemsContainerlist-5" aria-hidden="true" class="sapUiHiddenPlaceholder"></span></div>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                      <div id="allMyAppsView--oItemsContainerlist-after" role="none" tabindex="0" class="sapMListDummyArea sapMListDummyAreaSticky"></div>
+                                   </div>
+                                </div>
+                             </div>
+                             <span id="sap-ui-invisible-allMyAppsView--sapUshellAllMyAppsCustomPanel" data-sap-ui="sap-ui-invisible-allMyAppsView--sapUshellAllMyAppsCustomPanel" aria-hidden="true" class="sapUiHiddenPlaceholder"></span>
+                          </section>
+                       </div>
+                       <div id="allMyAppsView--sapUshellAllMyAppsEmptyDetailsPage" data-sap-ui="allMyAppsView--sapUshellAllMyAppsEmptyDetailsPage" data-sap-ui-render="" class="sapMPage sapMPageBgStandard sapMPageBusyCoversAll sapMNavItem sapMNavItemHidden" aria-hidden="true">
+                          <section id="allMyAppsView--sapUshellAllMyAppsEmptyDetailsPage-cont"><span id="__label2" data-sap-ui="__label2" data-sap-ui-render="" class="sapMLabel sapUiSelectable sapMLabelMaxWidth sapUshellAllMyAppsEmptyDetailsPageText" style="text-align: center;"><span id="__label2-text" class="sapMLabelTextWrapper"><bdi id="__label2-bdi">Select Category</bdi></span><span data-colon=":" class="sapMLabelColonAndRequired"></span></span></section>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <span id="sapUshellAllMyAppsPopover-popover-arrow" class="sapMPopoverArr sapMPopoverArrUp" style="left: 153.6px;"></span><span id="sapUshellAllMyAppsPopover-popover-middlefe" tabindex="-1" class="sapMPopoverHiddenFocusable"></span><span id="sapUshellAllMyAppsPopover-popover-lastfe" tabindex="0" role="presentation" class="sapMPopoverHiddenFocusable"></span>
+     </div>
+    <div id="shellLayout" class="sapUshellFlexRow">
+        <div id="backgroundImage-shellArea" data-sap-ui-root-content="true">
+            <div class="sapUiShellBackgroundImage sapUiGlobalBackgroundImageForce sapContrastPlus"></div>
+            <div class="sapMShellBG sapUiGlobalBackgroundImage"></div>
+        </div>
+        <div id="shapes-shellArea" data-sap-ui-root-content="true"></div>
+        <div id="sapUshellPopupWithinArea" class="sapUshellFlexGrowShrink sapUshellFlexRow">
+            <div id="floatingContainerDockStart-shellArea" class="sapUshellFloatingContainerDock" data-sap-ui-root-content="true"></div>
+            <div class="sapUshellFlexGrowShrink sapUshellFlexColumn">
+                <div id="header-shellArea" data-sap-ui-root-content="true" data-sap-ui-area="header-shellArea">
+                    <header id="shell-header" data-sap-ui="shell-header" data-sap-ui-render="" aria-label="Shell Bar" data-sap-ui-customfastnavgroup="true" class="sapUshellShellHeader sapContrastPlus">
+                        <div id="shell-header-hdr-begin" class="sapUshellShellHeadBegin"><a id="shell-header-logo" href="./index.html" title="Navigate to Home" role="button" class="sapUshellShellIco"><img id="shell-header-icon" alt="SAP Logo" src="./Home2_files/SAPLogo.svg"></a>
+                            <h1 id="shellAppTitle" data-sap-ui="shellAppTitle" data-sap-ui-render="" aria-level="1" class="sapUshellHeadTitle sapUshellAppTitleClickable">
+                                <div id="shellAppTitle-button" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Home - Show All My Apps" class="sapUshellAppTitle" title="Navigation menu"><span class="sapUshellAppTitleText">Home</span><span class="sapUshellShellHeadAction"><span id="__icon0" data-sap-ui="__icon0" data-sap-ui-render="" role="presentation" aria-hidden="true" aria-label="Navigation menu" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL sapUshellAppTitleMenuIcon" style="font-family: SAP-icons;"><span title="Navigation menu" aria-hidden="true" class="sapUiIconTitle"></span></span></span></div>
+                            </h1>
+                        </div>
+                        <div id="shell-header-hdr-search-container" class="sapUshellShellHeadSearchContainer">
+                            <div id="shell-header-hdr-search" data-help-id="shellHeader-search" class="sapUshellShellSearch" style="max-width: 0rem; display: none;"></div>
+                        </div>
+                        <div id="shell-header-hdr-end" class="sapUshellShellHeadEnd"><span id="userActionsMenuHeaderButton" data-sap-ui="userActionsMenuHeaderButton" data-sap-ui-render="" role="button" tabindex="0" title="Profile of Default User" aria-label="Profile of Default User" aria-haspopup="menu" class="sapFAvatar sapFAvatarColorAccent6 sapFAvatarXS sapFAvatarInitials sapFAvatarCircle sapMPointer sapFAvatarFocusable"><span class="sapFAvatarInitialsHolder">EY</span></span></div>
+                    </header>
+                </div>
+                <div id="subHeader-shellArea" data-sap-ui-root-content="true"></div>
+                <div class="sapUshellFlexGrowShrink sapUshellFlexRow">
+                    <div id="toolArea-shellArea" class="sapUshellPositionRelative" data-sap-ui-root-content="true"></div>
+                    <div id="sidePane-shellArea" data-sap-ui-root-content="true"></div>
+                    <div class="sapUshellFlexGrowShrink sapUshellFlexColumn">
+                        <div id="navigationBar-shellArea" data-sap-ui-root-content="true" data-sap-ui-area="navigationBar-shellArea"><span id="sap-ui-invisible-anchorNavigationBar" data-sap-ui="sap-ui-invisible-anchorNavigationBar" aria-hidden="true" class="sapUiHiddenPlaceholder"></span></div>
+                        <div class="sapUshellFlexGrowShrink sapUshellPositionRelative sapUshellOverflowHidden sapUshellFlexColumn">
+                            <div id="canvas" class="sapUshellFlexGrowShrink sapUshellPositionRelative sapUshellShell" data-sap-ui-root-content="true" data-sap-ui-area="canvas">
+                                <div id="__container0" data-sap-ui="__container0" data-sap-ui-render="" class="sapUiComponentContainer" style="width: 100%; height: 100%;">
+                                    <div id="__container0-uiarea" style="width: 100%; height: 100%;">
+                                        <div id="mainShell" data-sap-ui="mainShell" data-sap-ui-render="" class="sapUiView sapUiJSView sapUiViewDisplayBlock sapUshellRenderer" style="width: 100%; height: 100%;">
+                                            <main id="viewPortContainer" data-sap-ui="viewPortContainer" data-sap-ui-render="" role="main" aria-label="Shell Content">
+                                                <div id="__renderer0---Shell-home-component-container" data-sap-ui="__renderer0---Shell-home-component-container" data-sap-ui-render="" class="sapUiComponentContainer" style="width: 100%; height: 100%;">
+                                                    <div id="__renderer0---Shell-home-component-container-uiarea" style="width: 100%; height: 100%;">
+                                                        <div id="__content0" data-sap-ui="__content0" data-sap-ui-render="" class="sapUiView sapUshellDashboardView" style="width: 100%;">
+                                                            <div id="sapUshellDashboardPage" data-sap-ui="sapUshellDashboardPage" data-sap-ui-render="" class="sapMPage sapMPageBgStandard sapMPageWithFooter sapMPageBusyCoversAll sapMPageWithFloatingFooter">
+                                                                <section id="sapUshellDashboardPage-cont" role="region" aria-label="Tile Groups" class="sapMPageEnableScrolling sapUiScrollDelegate" style="overflow: hidden auto;">
+                                                                    <div id="dashboardGroups" data-sap-ui="dashboardGroups" data-sap-ui-render="" data-sap-ui-customfastnavgroup="true" class="sapUshellDashboardGroupsContainer" style="margin-bottom: 0px;">
+                                                                        <div class="sapUshellDashboardGroupsContainerItem sapUshellDisableDragAndDrop">
+                                                                            <div id="__container1" data-sap-ui="__container1" data-sap-ui-render="" class="sapUshellTileContainer sapUshellLinksAreaHidden sapUshellEmptyLinksAreaPlaceHolder">
+                                                                                <div class="sapUshellTileContainerContent sapUshellTileContainerLocked sapUshellTileContainerDefault">
+                                                                                    <div id="__container1-groupheader" aria-label="My Home Group default" class="sapUshellTileContainerHeader sapContrastPlus">
+                                                                                        <div id="__container1-title" class="sapUshellContainerTitleFlex">
+                                                                                            <h2 id="__container1-titleText" title="My Home" data-role="group" class="sapUshellContainerTitle">My Home</h2><span id="__icon2" data-sap-ui="__icon2" data-sap-ui-render="" role="presentation" aria-hidden="true" aria-label="locked" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL sapUshellContainerIcon sapUshellContainerIconHidden" style="font-family: SAP-icons;"></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <ul class="sapUshellTilesContainer-sortable sapUshellInner">
+                                                                                        <li id="__tile6" data-sap-ui="__tile6" data-sap-ui-render="" aria-describedby="__container1-titleText" class="sapUshellTile sapUshellLockedTile" tabindex="0" aria-labelledby="sapUshellDashboardAccessibilityTileText __tile12">
+                                                                                            <div class="sapUshellTileWrapper">
+                                                                                                <div class="sapUshellTileInner"><a id="__tile12" data-sap-ui="__tile12" data-sap-ui-render="" href="https://guided-experience-sac-ap11.cfapps.ap11.hana.ondemand.com/sap/fpa/ui/app.html#/story2&/s2/78C42001D6BD6772EA171066BAF67093/?mode=present" rel="noopener noreferrer" target="_blank" draggable="false" role="link" aria-label="Carbon Insight Dashboard: Tracking and Reducing Emissions
+
+Analytical Dashboard
+Tile" tabindex="0" class="sapMGT sapMGTStateLoaded sapMGTScopeDisplay OneByOne sapMPointer">
+                                                                                                        <div class="sapMGTHdrContent OneByOne">
+                                                                                                            <div id="__tile12-hdr-text" class="sapMGTHdrTxt"><span id="__tile12-title" data-sap-ui="__tile12-title" data-sap-ui-render="" dir="auto" class="sapMText sapUiSelectable sapMTextMaxLineWrapper sapMTextMaxWidth sapMGTTitle" style="text-align: left;"><span id="__tile12-title-inner" class="sapMTextMaxLine sapMTextLineClamp" style="-webkit-line-clamp: 3; max-height: 48px;">Carbon Insight Dashboard: Tracking and Reducing Emissions</span></span></div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile12-content" class="sapMGTContent">
+                                                                                                            <div id="__content12" data-sap-ui="__content12" data-sap-ui-render="" class="sapMTileCnt sapMFrameTypeOneByOne sapMGTNoPriority">
+                                                                                                                <div id="__content12-content" class="sapMTileCntContent">
+                                                                                                                    <div id="__content11" data-sap-ui="__content11" data-sap-ui-render="" class="sapMImageContent sapUshellFullWidth sapMTcInnerMarker"><span id="__content11-icon-image" data-sap-ui="__content11-icon-image" data-sap-ui-render="" role="presentation" aria-hidden="true" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL sapMImageContentImageIcon" style="font-family: SAP-icons;"></span></div>
+                                                                                                                </div>
+                                                                                                                <div id="__content12-footer-text" class="sapMTileCntFtrTxt sapMTileCntFooterTextColorNeutral">Analytical Dashboard</div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile12-hover-overlay" class="sapMGTWithoutImageHoverOverlay"></div>
+                                                                                                        <div id="__tile12-focus" class="sapMGTFocusDiv"></div>
+                                                                                                    </a></div>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                        <li id="__tile7" data-sap-ui="__tile7" data-sap-ui-render="" aria-describedby="__container1-titleText" class="sapUshellTile sapUshellLockedTile">
+                                                                                            <div class="sapUshellTileWrapper">
+                                                                                                <div class="sapUshellTileInner"><a id="__tile0" data-sap-ui="__tile0" data-sap-ui-render="" href="https://guided-experience-sac-ap11.cfapps.ap11.hana.ondemand.com/sap/fpa/ui/tenants/b265d/bo/application/8188E58569653E0461671ECE4676DCDA?mode=present" rel="noopener noreferrer" target="_blank" draggable="false" role="link" aria-label="Carbon Reduction Scorecard Report
+
+Carbon Reduction Performance Overview
+Tile" tabindex="-1" class="sapMGT sapMGTStateLoaded sapMGTScopeDisplay OneByOne sapMPointer">
+                                                                                                        <div class="sapMGTHdrContent OneByOne">
+                                                                                                            <div id="__tile0-hdr-text" class="sapMGTHdrTxt"><span id="__tile0-title" data-sap-ui="__tile0-title" data-sap-ui-render="" dir="auto" class="sapMText sapUiSelectable sapMTextMaxLineWrapper sapMTextMaxWidth sapMGTTitle" style="text-align: left;"><span id="__tile0-title-inner" class="sapMTextMaxLine sapMTextLineClamp" style="-webkit-line-clamp: 3; max-height: 48px;">Carbon Reduction Scorecard Report</span></span></div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile0-content" class="sapMGTContent">
+                                                                                                            <div id="__content2" data-sap-ui="__content2" data-sap-ui-render="" class="sapMTileCnt sapMFrameTypeOneByOne sapMGTNoPriority">
+                                                                                                                <div id="__content2-content" class="sapMTileCntContent">
+                                                                                                                    <div id="__content1" data-sap-ui="__content1" data-sap-ui-render="" class="sapMImageContent sapUshellFullWidth sapMTcInnerMarker"><span id="__content1-icon-image" data-sap-ui="__content1-icon-image" data-sap-ui-render="" role="presentation" aria-hidden="true" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL sapMImageContentImageIcon" style="font-family: SAP-icons;"></span></div>
+                                                                                                                </div>
+                                                                                                                <div id="__content2-footer-text" class="sapMTileCntFtrTxt sapMTileCntFooterTextColorNeutral">Carbon Reduction Performance Overview</div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile0-hover-overlay" class="sapMGTWithoutImageHoverOverlay"></div>
+                                                                                                        <div id="__tile0-focus" class="sapMGTFocusDiv"></div>
+                                                                                                    </a></div>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                        <li id="__tile8" data-sap-ui="__tile8" data-sap-ui-render="" aria-describedby="__container1-titleText" class="sapUshellTile sapUshellLockedTile">
+                                                                                            <div class="sapUshellTileWrapper">
+                                                                                                <div class="sapUshellTileInner"><a id="__tile1" data-sap-ui="__tile1" data-sap-ui-render="" href="./carbon-offset-project/index.view.html" rel="noopener noreferrer" draggable="false" role="link" aria-label="Carbon Offset Hub
+
+Carbon Offset Project Showcase
+Tile" tabindex="-1" class="sapMGT sapMGTStateLoaded sapMGTScopeDisplay OneByOne sapMPointer">
+                                                                                                        <div class="sapMGTHdrContent OneByOne">
+                                                                                                            <div id="__tile1-hdr-text" class="sapMGTHdrTxt"><span id="__tile1-title" data-sap-ui="__tile1-title" data-sap-ui-render="" dir="auto" class="sapMText sapUiSelectable sapMTextMaxLineWrapper sapMTextMaxWidth sapMGTTitle" style="text-align: left;"><span id="__tile1-title-inner" class="sapMTextMaxLine sapMTextLineClamp" style="-webkit-line-clamp: 3; max-height: 48px;">Carbon Offset Hub</span></span></div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile1-content" class="sapMGTContent">
+                                                                                                            <div id="__content4" data-sap-ui="__content4" data-sap-ui-render="" class="sapMTileCnt sapMFrameTypeOneByOne sapMGTNoPriority">
+                                                                                                                <div id="__content4-content" class="sapMTileCntContent">
+                                                                                                                    <div id="__content3" data-sap-ui="__content3" data-sap-ui-render="" class="sapMImageContent sapUshellFullWidth sapMTcInnerMarker"><span id="__content3-icon-image" data-sap-ui="__content3-icon-image" data-sap-ui-render="" role="presentation" aria-hidden="true" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL sapMImageContentImageIcon" style="font-family: SAP-icons;"></span></div>
+                                                                                                                </div>
+                                                                                                                <div id="__content4-footer-text" class="sapMTileCntFtrTxt sapMTileCntFooterTextColorNeutral">Carbon Offset Project Showcase</div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile1-hover-overlay" class="sapMGTWithoutImageHoverOverlay"></div>
+                                                                                                        <div id="__tile1-focus" class="sapMGTFocusDiv"></div>
+                                                                                                    </a></div>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                        <li id="__tile9" data-sap-ui="__tile9" data-sap-ui-render="" aria-describedby="__container1-titleText" class="sapUshellTile sapUshellLockedTile">
+                                                                                            <div class="sapUshellTileWrapper">
+                                                                                                <div class="sapUshellTileInner"><a id="__tile2" data-sap-ui="__tile2" data-sap-ui-render="" href="./gamification/Gamification.html" rel="noopener noreferrer" draggable="false" role="link" aria-label="Carbon Gamification Hub
+
+Energize carbon reduction with leaderboards and badges in our Gamification Hub
+Tile" tabindex="-1" class="sapMGT sapMGTStateLoaded sapMGTScopeDisplay OneByOne sapMPointer">
+                                                                                                        <div class="sapMGTHdrContent OneByOne">
+                                                                                                            <div id="__tile2-hdr-text" class="sapMGTHdrTxt"><span id="__tile2-title" data-sap-ui="__tile2-title" data-sap-ui-render="" dir="auto" class="sapMText sapUiSelectable sapMTextMaxLineWrapper sapMTextMaxWidth sapMGTTitle" style="text-align: left;"><span id="__tile2-title-inner" class="sapMTextMaxLine sapMTextLineClamp" style="-webkit-line-clamp: 3; max-height: 48px;">Carbon Gamification Hub</span></span></div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile2-content" class="sapMGTContent">
+                                                                                                            <div id="__content6" data-sap-ui="__content6" data-sap-ui-render="" class="sapMTileCnt sapMFrameTypeOneByOne sapMGTNoPriority">
+                                                                                                                <div id="__content6-content" class="sapMTileCntContent">
+                                                                                                                    <div id="__content5" data-sap-ui="__content5" data-sap-ui-render="" class="sapMImageContent sapUshellFullWidth sapMTcInnerMarker"><span id="__content5-icon-image" data-sap-ui="__content5-icon-image" data-sap-ui-render="" role="presentation" aria-hidden="true" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL sapMImageContentImageIcon" style="font-family: SAP-icons;"></span></div>
+                                                                                                                </div>
+                                                                                                                <div id="__content6-footer-text" class="sapMTileCntFtrTxt sapMTileCntFooterTextColorNeutral">Energize carbon reduction with leaderboards and badges in our Gamification Hub</div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile2-hover-overlay" class="sapMGTWithoutImageHoverOverlay"></div>
+                                                                                                        <div id="__tile2-focus" class="sapMGTFocusDiv"></div>
+                                                                                                    </a></div>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                        <li id="__tile10" data-sap-ui="__tile10" data-sap-ui-render="" aria-describedby="__container1-titleText" class="sapUshellTile sapUshellLockedTile" aria-labelledby="sapUshellDashboardAccessibilityTileText __tile3">
+                                                                                            <div class="sapUshellTileWrapper">
+                                                                                                <div class="sapUshellTileInner"><a id="__tile3" data-sap-ui="__tile3" data-sap-ui-render="" href="./data_viewer/data_viewer.view.html" rel="noopener noreferrer" draggable="false" role="link" aria-label="CarbonVision Data Viewer
+
+Streamlined Carbon Data Viewing Experience
+Tile" tabindex="-1" class="sapMGT sapMGTStateLoaded sapMGTScopeDisplay OneByOne sapMPointer">
+                                                                                                        <div class="sapMGTHdrContent OneByOne">
+                                                                                                            <div id="__tile3-hdr-text" class="sapMGTHdrTxt"><span id="__tile3-title" data-sap-ui="__tile3-title" data-sap-ui-render="" dir="auto" class="sapMText sapUiSelectable sapMTextMaxLineWrapper sapMTextMaxWidth sapMGTTitle" style="text-align: left;"><span id="__tile3-title-inner" class="sapMTextMaxLine sapMTextLineClamp" style="-webkit-line-clamp: 3; max-height: 48px;">CarbonVision Data Viewer</span></span></div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile3-content" class="sapMGTContent">
+                                                                                                            <div id="__content8" data-sap-ui="__content8" data-sap-ui-render="" class="sapMTileCnt sapMFrameTypeOneByOne sapMGTNoPriority">
+                                                                                                                <div id="__content8-content" class="sapMTileCntContent">
+                                                                                                                    <div id="__content7" data-sap-ui="__content7" data-sap-ui-render="" class="sapMImageContent sapUshellFullWidth sapMTcInnerMarker"><span id="__content7-icon-image" data-sap-ui="__content7-icon-image" data-sap-ui-render="" role="presentation" aria-hidden="true" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL sapMImageContentImageIcon" style="font-family: SAP-icons;"></span></div>
+                                                                                                                </div>
+                                                                                                                <div id="__content8-footer-text" class="sapMTileCntFtrTxt sapMTileCntFooterTextColorNeutral">Streamlined Carbon Data Viewing Experience</div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile3-hover-overlay" class="sapMGTWithoutImageHoverOverlay"></div>
+                                                                                                        <div id="__tile3-focus" class="sapMGTFocusDiv"></div>
+                                                                                                    </a></div>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                        <li id="__tile11" data-sap-ui="__tile11" data-sap-ui-render="" aria-describedby="__container1-titleText" class="sapUshellTile sapUshellLockedTile">
+                                                                                            <div class="sapUshellTileWrapper">
+                                                                                                <div class="sapUshellTileInner"><a id="__tile4" data-sap-ui="__tile4" data-sap-ui-render="" href="./chatbot/chatbot.view.html" rel="noopener noreferrer" draggable="false" role="link" aria-label="AI-Driven Carbon Tracking and Reduction Assistant
+
+AI ChatBot for efficient carbon tracking and reduction guidance
+Tile" tabindex="-1" class="sapMGT sapMGTStateLoaded sapMGTScopeDisplay OneByOne sapMPointer">
+                                                                                                        <div class="sapMGTHdrContent OneByOne">
+                                                                                                            <div id="__tile4-hdr-text" class="sapMGTHdrTxt"><span id="__tile4-title" data-sap-ui="__tile4-title" data-sap-ui-render="" dir="auto" class="sapMText sapUiSelectable sapMTextMaxLineWrapper sapMTextMaxWidth sapMGTTitle" style="text-align: left;"><span id="__tile4-title-inner" class="sapMTextMaxLine sapMTextLineClamp" style="-webkit-line-clamp: 3; max-height: 48px;">AI-Driven Carbon Tracking and Reduction Assistant</span></span></div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile4-content" class="sapMGTContent">
+                                                                                                            <div id="__content10" data-sap-ui="__content10" data-sap-ui-render="" class="sapMTileCnt sapMFrameTypeOneByOne sapMGTNoPriority">
+                                                                                                                <div id="__content10-content" class="sapMTileCntContent">
+                                                                                                                    <div id="__content9" data-sap-ui="__content9" data-sap-ui-render="" class="sapMImageContent sapUshellFullWidth sapMTcInnerMarker"><span id="__content9-icon-image" data-sap-ui="__content9-icon-image" data-sap-ui-render="" role="presentation" aria-hidden="true" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL sapMImageContentImageIcon" style="font-family: SAP-icons;"></span></div>
+                                                                                                                </div>
+                                                                                                                <div id="__content10-footer-text" class="sapMTileCntFtrTxt sapMTileCntFooterTextColorNeutral">AI ChatBot for efficient carbon tracking and reduction guidance</div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div id="__tile4-hover-overlay" class="sapMGTWithoutImageHoverOverlay"></div>
+                                                                                                        <div id="__tile4-focus" class="sapMGTFocusDiv"></div>
+                                                                                                    </a></div>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <div class="sapUshellLineModeContainer sapUshellNoLinksAreaPresent">
+                                                                                        <div class="sapUshellNoLinksAreaPresentText"><span id="__text0" data-sap-ui="__text0" data-sap-ui-render="" dir="auto" class="sapMText sapUiSelectable sapMTextMaxWidth sapUshellNoLinksAreaPresentTextInner" style="text-align: left;">Drag apps here to create links.</span></div>
+                                                                                        <div class="sapUshellLinksInnerContainer"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                                <div role="region" class="sapMPageFooter sapMPageFloatingFooter"><span id="sap-ui-invisible-sapUshellDashboardFooter" data-sap-ui="sap-ui-invisible-sapUshellDashboardFooter" aria-hidden="true" class="sapUiHiddenPlaceholder"></span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </main>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="floatingActions-shellArea" data-sap-ui-root-content="true"></div>
+                            <div id="rightFloatingContainer-shellArea" data-sap-ui-root-content="true"></div>
+                        </div>
+                    </div>
+                </div>
+                <footer id="footer-shellArea" class="sapUshellPositionStatic sapMPageFooter" data-sap-ui-root-content="true"></footer>
+            </div>
+            <div id="floatingContainerDockEnd-shellArea" class="sapUshellFloatingContainerDock" data-sap-ui-root-content="true"></div>
+            <div id="floatingContainer-shellArea" data-sap-ui-root-content="true"></div>
+        </div>
+        <div id="helpContent-shellArea" data-sap-ui-root-content="true"></div>
+    </div>
+    <div aria-hidden="true" id="sap-ui-preserve" class="sapUiHidden sapUiForcedHidden" style="width: 0px; height: 0px; overflow: hidden;"></div>
+</body>
+</html>
