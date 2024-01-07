@@ -1,4 +1,6 @@
 # Carbon Vision - EY Young Technology Professional Challenge 2023
+## Overall Top 6 Finalists for the EY YTPC 2023
+## Honourable Mention: Best Technology@Speed Award
 
 ## Project Overview
 
