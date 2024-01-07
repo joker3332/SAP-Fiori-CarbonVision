@@ -12,29 +12,29 @@
    - Interactive charts and graphs for insightful analysis.
 
 ### 2. Scorecard Report
-   ![](App-Demo-Screenshot\ScorecardReport1.jpeg)
-   ![](App-Demo-Screenshot\ScorecardReport2.jpeg)
+   ![](App-Demo-Screenshot/ScorecardReport1.jpeg)
+   ![](App-Demo-Screenshot/ScorecardReport2.jpeg)
    - Comprehensive reports on carbon reduction achievements.
    - Benchmarking against set targets.
 
 ### 3. AI Chatbot Consultant
-   ![](App-Demo-Screenshot\Chatbot.jpeg)
+   ![](App-Demo-Screenshot/Chatbot.jpeg)
    - AI-powered chatbot for personalized carbon reduction advice.
    - Natural language processing for user-friendly interactions.
 
 ### 4. Data Viewer
-   ![](App-Demo-Screenshot\DataViewer.jpeg)
+   ![](App-Demo-Screenshot/DataViewer.jpeg)
    - User-friendly interface to explore detailed carbon data.
    - Filtering and sorting options for a customized viewing experience.
 
 ### 5. Carbon Offset Project Showcase
-   ![](App-Demo-Screenshot\CarbonOffsetProjects.jpeg)
+   ![](App-Demo-Screenshot/CarbonOffsetProjects.jpeg)
    - Showcase of carbon offset projects supported by the platform.
    - Information on environmental impact and contributions.
 
 ### 6. Gamification Elements
-   ![](App-Demo-Screenshot\Gamification_Badges.jpeg)
-   ![](App-Demo-Screenshot\Gamification_Leaderboard.jpeg)
+   ![](App-Demo-Screenshot/Gamification_Badges.jpeg)
+   ![](App-Demo-Screenshot/Gamification_Leaderboard.jpeg)
    - Engaging gamification features to encourage sustainable practices.
    - Rewards and recognition for users contributing to carbon reduction.
 
