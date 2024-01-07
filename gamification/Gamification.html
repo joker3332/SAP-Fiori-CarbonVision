@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Tracking and Reduction Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="leaderboard">
+        <a href="../index.html" title="Navigate to Home" role="button" style="position: absolute;top: 12px;left: 12px;">
+            <img alt="SAP Logo" src="./Home2_files/SAPLogo.svg" style="height: 45px;">
+        </a>
+        <div class="container">
+            <img src="images/EY.png" class="theme-img"/>
+            <div class="description">
+                <h1> CarbonVision Gamification Hub </h1>
+                <!--<p style="opacity:0!important;">Date: 02/24/2022</p>
+                <select id="viewSelect" onchange="switchView()">
+                    <option value="table">Leaderboard</option>
+                    <option value="badges">Badges</option>
+                </select>-->
+				<button class="page-btn clicked" id="tableViewButton" onclick="switchToTable()">
+                    <img src="images/podium.png" alt="Table View">
+                    <div class="button-label">Team Leaderboard</div>
+                </button>
+                <button class="page-btn" id="badgesViewButton" onclick="switchToBadges()">
+                    <img src="images/badge.png" alt="Badges View">
+                    <div class="button-label">Achievement Badges</div>
+                </button>
+                <input id="search" class="search" placeholder="Search" oninput="search()">
+            </div>
+        </div>
+
+        <!-- Table View -->
+        <div id="tableView">
+			<h3 class="leaderboard_title">Carbon Reduction Leaderboard</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>
+                            Team
+                        </td>
+                        <td>
+                            Activity Score
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="winner">1</td>
+                        <td><img src="images/avatar1.png"><p>Sustainable Solutions Division</p></td>
+                        <td>239</td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="runner-up">2</td>
+                        <td><img src="images/avatar2.png"><p>Carbon Mitigation Team</p></td>
+                        <td>209</td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="second-runner-up">3</td>
+                        <td><img src="images/avatar3.png"><p>Emission Management Bureau</p></td>
+                        <td>154</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>4</td>
+                        <td><img src="images/avatar4.png"><p>Renewable Energy and Emissions Control Team</p></td>
+                        <td>100</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>5</td>
+                        <td><img src="images/avatar5.png"><p>Carbon Reduction and Monitoring Division</p></td>
+                        <td>82</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Badges View -->
+        <div id="badgesView" style="display: none;">
+			<h3 class="badge-title">Carbon Reduction Achievement Badges</h3>
+            <div class="badge-container">
+                <!-- Badge 1: Green Guardian Badge -->
+                <div class="badge">
+                    <h3>Green Guardian</h3>
+                    <img src="images/badge1.png" alt="Green Guardian Badge">
+                </div>
+
+                <!-- Badge 2: Sustainability Star Badge -->
+                <div class="badge">
+                    <h3>Sustainability Star</h3>
+                    <img src="images/badge2.png" alt="Sustainability Star Badge">
+                </div>
+
+                <!-- Badge 3: Carbon Warrior Badge -->
+                <div class="badge">
+                    <h3>Carbon Warrior</h3>
+                    <img src="images/badge3.png" alt="Carbon Warrior Badge">
+                </div>
+                <!-- Add other badges as needed -->
+            </div>
+        </div>
+
+    </div>
+    <script>
+	
+	function switchToTable() {
+            document.getElementById('tableView').style.display = 'block';
+            document.getElementById('badgesView').style.display = 'none';
+            document.getElementById('tableViewButton').classList.add('clicked');
+            document.getElementById('badgesViewButton').classList.remove('clicked');
+        }
+
+        function switchToBadges() {
+            document.getElementById('tableView').style.display = 'none';
+            document.getElementById('badgesView').style.display = 'block';
+            document.getElementById('tableViewButton').classList.remove('clicked');
+            document.getElementById('badgesViewButton').classList.add('clicked');
+        }
+		
+        function switchView() {
+            var viewSelect = document.getElementById('viewSelect');
+            var tableView = document.getElementById('tableView');
+            var badgesView = document.getElementById('badgesView');
+
+            if (viewSelect.value === 'table') {
+                tableView.style.display = 'block';
+                badgesView.style.display = 'none';
+            } else if (viewSelect.value === 'badges') {
+                tableView.style.display = 'none';
+                badgesView.style.display = 'block';
+            }
+        }
+
+        function search() {
+            var text = document.getElementById('search').value;
+            const tr = document.getElementsByTagName('tr');
+            for (let i = 1; i < tr.length; i++) {
+                if (!tr[i].children[1].children[1].innerHTML.toLowerCase().includes(
+                    text.toLowerCase()
+                )) {
+                    tr[i].style.display = 'none';
+                } else {
+                    tr[i].style.display = '';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
