@@ -1,0 +1,191 @@
+{
+  "services": {
+    "LaunchPage": {
+      "adapter": {
+        "config": {
+          "catalogs": [],
+          "groups": [
+            {
+              "id": "Sustainability",
+              "title": "Carbon Tracking & Reduction Functionalities",
+              "isPreset": true,
+              "isVisible": true,
+              "isGroupLocked": true,
+              "tiles": [
+                {
+                  "id": "AnalyticalDashboard",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Carbon Insight Dashboard: Tracking and Reducing Emissions",
+                    "subtitle": "",
+                    "info": "Analytical Dashboard",
+                    "icon": "sap-icon://bbyd-dashboard",
+                    "targetURL": "https://guided-experience-sac-ap11.cfapps.ap11.hana.ondemand.com/sap/fpa/ui/app.html#/story2&/s2/78C42001D6BD6772EA171066BAF67093/?mode=present"
+                  }
+                },
+                {
+                  "id": "CarbonReductionScorecardReport",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Carbon Reduction Scorecard Report",
+                    "subtitle": "",
+                    "info": "Carbon Reduction Performance Overview",
+                    "icon": "sap-icon://manager-insight",
+                    "targetURL": "https://guided-experience-sac-ap11.cfapps.ap11.hana.ondemand.com/sap/fpa/ui/tenants/b265d/bo/application/8188E58569653E0461671ECE4676DCDA?mode=present"
+                  }
+                },
+                {
+                  "id": "CarbonOffsetProjectPage",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Carbon Offset Hub",
+                    "subtitle": "",
+                    "info": "Carbon Offset Project Showcase",
+                    "icon": "sap-icon://business-objects-mobile",
+                    "targetURL": "./carbon-offset-project/index.view.html"
+                  }
+                },
+                {
+                  "id": "GamificationTeamLeaderboardAndBadges",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                      "title": "Carbon Gamification Hub",
+                      "subtitle": "",
+                      "info": "Energize carbon reduction with leaderboards and badges in our Gamification Hub",
+                      "icon": "sap-icon://badge",
+                      "targetURL": "./gamification/Gamification.html"
+                  }
+              },
+                {
+                    "id": "DataViewer",
+                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                    "properties": {
+                        "title": "CarbonVision Data Viewer",
+                        "subtitle": "",
+                        "info": "Streamlined Carbon Data Viewing Experience",
+                        "icon": "sap-icon://excel-attachment",
+                        "targetURL": "./data_viewer/data_viewer.view.html"
+                    }
+                },
+              {
+                "id": "AIChatBot",
+                "tileType": "sap.ushell.ui.tile.StaticTile",
+                "properties": {
+                    "title": "AI-Driven Carbon Tracking and Reduction Assistant",
+                    "subtitle": "",
+                    "info": "AI ChatBot for efficient carbon tracking and reduction guidance",
+                    "icon": "sap-icon://notification-2",
+                    "targetURL": "./chatbot/chatbot.view.html"
+                }
+            }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "NavTargetResolution": {
+      "config": {
+        "enableClientSideTargetResolution": true
+      }
+    },
+    "ClientSideTargetResolution": {
+    "adapter": {
+      "config": {
+        "inbounds": {
+          "AIChatBot": {
+            "semanticObject": "AIChatBot",
+            "action": "display",
+            "title": "AI ChatBot Consultant Services",
+            "signature": {
+              "parameters": {
+              },
+              "additionalParameters": "allowed"
+            },
+            "resolutionResult": {
+              "applicationType": "SAPUI5",
+              "additionalInformation": ["SAPUI5.Component=aichatbot","SAPUI5.Controller=aichatbot"],
+              "url": "./carbon-tracking-reduction/ai-chat-bot-services/webapp/"
+            }
+          },
+          "AnalyticalDashboard": {
+            "semanticObject": "AnalyticalDashboardView",
+            "action": "display",
+            "title": "CarbonVision Analytical Dashboard",
+            "signature": {
+              "parameters": {
+              },
+              "additionalParameters": "allowed"
+            },
+            "resolutionResult": {
+              "applicationType": "SAPUI5",
+              "additionalInformation": "SAPUI5.Component=analyticaldashboardview",
+              "url": "./carbon-tracking-reduction/analytical-dashboard-view/webapp"
+            }
+          },
+          "CarbonReductionScorecardReport": {
+            "semanticObject": "ScorecardReport",
+            "action": "display",
+            "title": "Carbon Reduction Scorecard Report",
+            "signature": {
+              "parameters": {
+              },
+              "additionalParameters": "allowed"
+            },
+            "resolutionResult": {
+              "applicationType": "SAPUI5",
+              "additionalInformation": "SAPUI5.Component=scorecardreport",
+              "url": "./carbon-tracking-reduction/carbon-reduction-scorecard-report/webapp"
+            }
+          },
+          "DataViewer": {
+            "semanticObject": "DataViewer",
+            "action": "display",
+            "title": "CarbonVision Data Viewer",
+            "signature": {
+              "parameters": {
+              },
+              "additionalParameters": "allowed"
+            },
+            "resolutionResult": {
+              "applicationType": "SAPUI5",
+              "additionalInformation": "SAPUI5.Component=dataviewer",
+              "url": "./carbon-tracking-reduction/carbonvision-data-viewer/webapp"
+            }
+          },
+          "GamificationTeamLeaderboardAndBadges": {
+            "semanticObject": "TeamLeaderboardAndBadges",
+            "action": "display",
+            "title": "Gamification - Team Leaderboard and Badges",
+            "signature": {
+              "parameters": {
+              },
+              "additionalParameters": "allowed"
+            },
+            "resolutionResult": {
+              "applicationType": "SAPUI5",
+              "additionalInformation": "SAPUI5.Component=gamification",
+              "url": "./carbon-tracking-reduction/team-leaderboard-and-badges/webapp"
+              }
+          },
+            "CarbonOffsetProjectPage": {
+              "semanticObject": "CarbonOffsetProjectPage",
+              "action": "display",
+              "title": "Carbon Offset Hub",
+              "signature": {
+                "parameters": {
+                },
+                "additionalParameters": "allowed"
+              },
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=carbonoffsetproject",
+                "url": "./carbon-tracking-reduction/carbon-offset-project/webapp"
+                }
+          }			
+        }
+      }
+      }
+    }
+  }
+}

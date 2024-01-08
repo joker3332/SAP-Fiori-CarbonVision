@@ -1,0 +1,157 @@
+body {
+    background: linear-gradient(to bottom, white, aliceblue) !important;
+}
+
+.heading-section {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.item {
+    min-height: 500px!important;
+}
+
+.testimony-wrap .img {
+    width: 40%;
+    height: auto !important;
+    min-height: 636px !important;
+}
+
+.modal-body {
+        padding:14px;
+        text-align: justify;
+        height: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .modal-body h3 {
+        font-size: 22px;
+        line-height: 22px;
+        color: #404040;
+        border-bottom: 2px solid #002366;
+        padding-bottom: 8px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        margin-right: 80px;
+        position: relative;
+        font-weight: 800 !important;
+        text-align: start !important;
+    }
+    
+    .modal-body p strong {
+        text-align: start !important;
+    }
+    
+    strong {
+        font-weight: bolder;
+    }
+    
+    .modal-body h3::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: -9px;
+        right: -60px;
+    }
+
+    .modal-body p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 18px;
+        color: #000000;
+    }
+    
+    .modal-body p.accreditations {
+        margin-left: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 0px !important;
+        margin-top: 25px!important;
+    }
+
+    .modal-body p.accreditations .carbon_credit_infographic {
+        width: 33%;
+        margin-bottom: 0;
+    }
+    
+    .modal-body p.accreditations .carbon_standard span.strong {
+        font-weight: 700;
+    }
+
+    .modal-body p.accreditations .carbon_standard span {
+        margin-bottom: 5px;
+        display: block;
+    }
+    
+    .modal-body p.accreditations .carbon_standard span.carbon_standard_icon {
+        background: url(images/verified-icon.svg) no-repeat scroll 0 0 transparent;
+        background-size: auto;
+        padding-left: 28px;
+    }
+
+    .modal-body p.accreditations .carbon_standard span {
+        margin-bottom: 5px;
+        display: block;
+    }
+    
+    .conservation h3 {
+        border-color: #002366;
+    }
+    
+    .conservation h3::after {
+        background: url(images/conservation_key.png) no-repeat scroll 0 0/cover transparent;
+    }
+    
+    .afforestation h3 {
+        border-color: #743410;
+    }
+    
+    .afforestation h3::after {
+        background: url(images/afforestation_key.png) no-repeat scroll 0 0/cover transparent;
+    }
+    
+    .renewable-energy h3 {
+        border-color: #89cfdc;
+    }
+    
+    .renewable-energy h3::after {
+        background: url(images/renewable-energy_key.png) no-repeat scroll 0 0/cover transparent;
+    }
+    
+    .household-device h3 {
+        border-color: #641964;
+    }
+    
+    .household-device h3::after {
+        background: url(images/household_device_key.png) no-repeat scroll 0 0/cover transparent;
+    }
+    
+    .carbon_standard {
+        margin-left: 20px;
+    }
+    
+    .testimony-wrap .text {
+        background: white;
+        padding: 11px!important;
+        width: 60%!important;
+    }
+    
+    .owl-carousel .owl-dots .owl-dot.active {
+        border: 1px solid #075ed4 !important;
+        background: #075ed4 !important;
+    }
+    
+    .col-md-12 .heading-section {
+        background-image: linear-gradient(45deg, #3498db 0%, #95a5a6 50%, #2c3e50 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    
+    small, .small {
+        font-size: 85%;
+        font-weight: bold;
+    }

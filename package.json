@@ -1,0 +1,85 @@
+{
+    "name": "carbon-vision-app",
+    "version": "1.0.0",
+    "description": "Business Apps for Carbon Tracking and Reduction by CarbonVision",
+    "repository": "https://github.com/SAP-samples/btp-ai-sustainability-bootcamp",
+    "license": "Apache License Version 2.0",
+    "private": true,
+    "dependencies": {
+        "@sap-cloud-sdk/util": "^3.8.0",
+        "@sap/cds": "^7.4.2",
+        "@sap/cds-odata-v2-adapter-proxy": "^1.8.14",
+        "@sap/cloud-sdk-vdm-maintenance-order-service": "^1.28.2",
+        "@sap/xsenv": "^3.2.2",
+        "axios": "^1.6.2",
+        "express": "^4",
+        "fs": "0.0.1-security",
+        "hdb": "^0.19.2",
+        "passport": ">=0.6.0",
+        "request": "^2.88.2"
+    },
+    "devDependencies": {
+        "@sap/hdi-deploy": "^4.3.3",
+        "sqlite3": "^5.0.4"
+    },
+    "scripts": {
+        "start": "cds run",
+        "watch": "cds watch"
+    },
+    "eslintConfig": {
+        "extends": "eslint:recommended",
+        "env": {
+            "es2020": true,
+            "node": true,
+            "jest": true,
+            "mocha": true
+        },
+        "globals": {
+            "SELECT": true,
+            "INSERT": true,
+            "UPDATE": true,
+            "DELETE": true,
+            "CREATE": true,
+            "DROP": true,
+            "CDL": true,
+            "CQL": true,
+            "CXL": true,
+            "cds": true
+        },
+        "rules": {
+            "no-console": "off",
+            "require-atomic-updates": "off"
+        }
+    },
+    "cds": {
+        "build": {
+            "target": "."
+        },
+        "aicore": {
+            "kind": "config",
+            "dest": "S4HC_AICOREBOOTCAMP",
+            "url": "_AICORE_DEPLOYMENT_URL_",
+            "default-resourcegroup": "_AICORE_DEFAULT_RESOURCE_GROUP_",
+            "sound-resourcegroup": "_AICORE_SOUND_RESOURCE_GROUP_",
+            "image-resourcegroup": "_AICORE_IMAGE_RESOURCE_GROUP_",
+            "inferences": {
+                "imageseg": "/_AICORE_IMAGESEG_DEPLOYMENT_ID_/v1/models/imagesegmodel:predict",
+                "soundclass": "/_AICORE_SOUNDCLASS_DEPLOYMENT_ID_/v1/models/soundmodel:predict"
+            }
+        },
+        "requires": {
+            "aicore": {
+                "kind": "rest",
+                "credentials": {
+                    "url": "_AICORE_DEPLOYMENT_URL_"
+                }
+            },
+            "db": {
+                "kind": "hana"
+            }
+        },
+        "hana": {
+            "deploy-format": "hdbtable"
+        }
+    }
+}

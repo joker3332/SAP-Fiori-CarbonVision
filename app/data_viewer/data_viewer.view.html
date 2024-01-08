@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>CarbonVision Data Viewer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Add this in the <head> section of your HTML file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+	body {
+	  background: linear-gradient(#E7ECF0,#A9C6DE);
+	  margin: 0;
+	  width: 100%;
+	  height: 100%;
+	 }
+	 
+	 /* tbody, td, tfoot, th, thead, tr {
+			border-color: black;
+			border-style: solid;
+			border-width: 0;
+		} */
+
+	.container {
+		padding: 30px;
+		text-align: center !important;
+		width: 1320px!important;
+		height: 1080px !important;
+	}
+	 .container h3 {
+		 font-size: 42px;
+		 font-weight: 700;
+		 margin:15px;
+		 background-color: #f3ec78;
+	  background-image: linear-gradient(45deg, #3498db 0%, #95a5a6 50%, #2c3e50 100%);
+	  background-size: 100%;
+	  background-clip: text;
+	  -webkit-background-clip: text;
+	  -moz-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  -moz-text-fill-color: transparent;
+	  text-align: center;
+      margin-bottom: 21.6px;
+	 }
+	 
+	 label {
+		 /* margin-bottom: 10px;
+		 font-size: 24px;
+		 font-weight: 500; */
+         font-weight: 600;
+         width: 180px;
+         font-size: 18px;
+	 }
+
+     table {
+        border-spacing: 1;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        font-size: 14px;
+        }
+        table * {
+        position: relative;
+        }
+        table td, table th {
+        padding-left: 8px;
+        }
+        table thead tr {
+        height: auto!important;
+        background: #36304a;
+        }
+        table tbody tr {
+        height: 50px;
+        }
+        table tbody tr:last-child {
+        border: 0;
+        }
+        table td, table th {
+        text-align: left;
+        }
+        table td.l, table th.l {
+        text-align: right;
+        }
+        table td.c, table th.c {
+        text-align: center;
+        }
+        table td.r, table th.r {
+        text-align: center;
+        }
+
+        .table100-head th {
+            font-size: 18px;
+            color: #fff;
+            line-height: 1.2;
+            font-weight: 600;
+            text-align: center;
+            padding: 16px;
+            border: none;
+        }
+
+        tbody tr:nth-child(even) {
+        background-color: #f5f5f5;
+        }
+
+        tbody tr {
+        font-size: 18px;
+        color: #000000 !important;
+        line-height: 1.2;
+        font-weight: normal;
+        }
+
+        tbody tr:hover {
+        color: #555555;
+        background-color: #f5f5f5;
+        cursor: pointer;
+        }
+
+        tbody tr td {
+        border: none !important;
+        text-align: center;
+        vertical-align: middle;
+        padding: 16px!important;
+        font-size: 18px;
+    }
+
+    #fileDropdown {
+        min-width:50%;
+        width: auto;
+    }
+	</style>
+  </head>
+ <body>
+    <a href="../fiori-apps.html" title="Navigate to Home" role="button" style="position: absolute!important;top: 12px;left: 12px;">
+        <img alt="SAP Logo" src="../SAPLogo.svg" style="height: 45px;">
+    </a>
+	<div class="container">
+	<h3>CarbonVision Data Viewer</h3>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <label for="fileDropdown">Select a CSV file:</label>
+        <select id="fileDropdown" onchange="handleFileSelect()" class="form-select">
+            <option value="" selected disabled>Select a file</option>
+        </select>
+    </div>
+    <br>
+    <div class="table100">
+        <table id="csvTable" class="table table-bordered table-striped"></table>
+    </div>
+	</div>
+    <script>
+        const fileDropdown = document.getElementById('fileDropdown');
+
+        // Fetch the list of CSV files from the folder
+        // Replace with your actual API or method to fetch the file list
+        const fileList = ["sap.carbonvision-ghg_emissions_by_region.csv", "sap.carbonvision-GHG_Emissions_Equity_Share_business_breakdown.csv", "sap.carbonvision-UPSTREAM_GHG_INTENSITY_REDUCTION.csv"];
+
+        // Populate the dropdown options
+        fileList.forEach(fileName => {
+            const option = document.createElement('option');
+            option.value = fileName;
+            option.text = fileName;
+            fileDropdown.add(option);
+        });
+
+        function handleFileSelect() {
+            const selectedFileName = fileDropdown.value;
+
+            if (selectedFileName) {
+                // Fetch the selected CSV file content
+                fetchAndDisplayCSV(selectedFileName);
+            } else {
+                alert('Please select a file.');
+            }
+        }
+
+        function fetchAndDisplayCSV(fileName) {
+            // Simulate fetching the CSV content based on the selected file name
+            console.log(fileName)
+            const content1 = `Year,Malaysia Operation (Million tCO2e),International Operation (Million tCO2e)
+            2018,48.25,3.37
+            2019,51.73,3.29
+            2020,46.74,2.32
+            2021,44.12,2.31
+            2022,46.11,3.47`;
+            const content2 = `Year,Upstream (Million tCO2e),Gas (Million tCO2e),Downstream (Million tCO2e),Corporate and Others (Million tCO2e)
+            2019,22.99,18.45,10.92,2.51
+            2020,23.58,16.39,10.43,2.4
+            2021,17.57,17.5,9.9,2.44
+            2022,18.51,18.83,10.56,2.31`;
+            const content3 = `Year,Upstream Malaysia (tCO2e/kboe),Upstream International (tCO2e/kboe),Total Upstream (tCO2e/kboe)
+            2018,75.55,21.07,56.75
+            2019,65.83,19.28,51.39
+            2020,65.27,14.99,50.3
+            2021,47.69,19.47,38.93
+            2022,40.15,23.92,34.57`;
+            const csvFiles = {
+                "sap.carbonvision-ghg_emissions_by_region.csv": content1,
+                "sap.carbonvision-GHG_Emissions_Equity_Share_business_breakdown.csv": content2,
+                "sap.carbonvision-UPSTREAM_GHG_INTENSITY_REDUCTION.csv": content3
+                // Add more filenames and corresponding CSV content as needed
+            };
+            const keyToRetrieve = fileName;
+            const csvContent = csvFiles[keyToRetrieve];
+            return csvFileToJSON(csvContent);
+        }
+
+        function csvFileToJSON(csv) {
+            try {
+                var jsonData = [];
+                var headers = [];
+
+                var rows = csv.split(/\r\n|\n|\r/);
+
+                for (var i = 0; i < rows.length; i++) {
+                    var cells = rows[i].split(",");
+                    var rowData = {};
+
+                    for (var j = 0; j < cells.length; j++) {
+                        if (i == 0) {
+                            var headerName = cells[j].trim();
+                            headers.push(headerName);
+                        } else {
+                            var key = headers[j];
+                            if (key) {
+                                rowData[key] = cells[j].trim();
+                            }
+                        }
+                    }
+
+                    if (i != 0) {
+                        jsonData.push(rowData);
+                    }
+                }
+
+                // displaying the JSON result into a table
+                displayJsonToTable(jsonData);
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function displayJsonToTable(jsonData) {
+            const table = document.getElementById('csvTable');
+
+            // Clear existing table
+            table.innerHTML = '';
+
+            if (jsonData.length > 0) {
+                var headers = Object.keys(jsonData[0]);
+                var htmlHeader = '<thead><tr class="table100-head">';
+
+                    for (var i = 0; i < headers.length; i++) {
+                        if (headers[i].trim() !== '') {
+                            htmlHeader += '<th>' + headers[i] + '</th>';
+                        }
+                    }
+
+                htmlHeader += '</tr></thead>';
+
+                var htmlBody = '<tbody>';
+                    for (var i = 0; i < jsonData.length; i++) {
+                        var row = jsonData[i];
+                        htmlBody += '<tr>';
+                        for (var j = 0; j < headers.length; j++) {
+                            var key = headers[j];
+                            var cellValue = row[key];
+
+                            // Check if the cell value is not empty before adding it to the HTML
+                            if (cellValue !== undefined && cellValue !== null && cellValue.trim() !== '') {
+                                htmlBody += '<td>' + cellValue + '</td>';
+                            } else {
+                                htmlBody += '<td></td>'; // Add an empty cell if the value is empty
+                            }
+                        }
+                        htmlBody += '</tr>';
+                    }
+
+                htmlBody += '</tbody>';
+                table.innerHTML = htmlHeader + htmlBody;
+            } else {
+                table.innerHTML = 'There is no data in CSV';
+            }
+        }
+    </script>
+</body>
+</html>
